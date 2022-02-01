@@ -20,4 +20,22 @@ namespace Task2
             MyClass.Print(inputText, inputColor);
         }
     }
+
+    internal static class MyClass
+    {
+        public enum Color
+        {
+            Black = ConsoleColor.Black,
+            Red = ConsoleColor.Red,
+            Blue = ConsoleColor.Blue
+        }
+        public static void Print(string stroka, int color)
+        {
+            Console.ForegroundColor = (ConsoleColor)color;
+            Console.WriteLine(stroka);
+            Console.ResetColor();
+        }
+    }
+
+
 }
